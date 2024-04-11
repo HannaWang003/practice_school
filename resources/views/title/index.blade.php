@@ -1,4 +1,1 @@
-<?php
-dd("view index ok")
-
-?>
+@extends('layouts.app');

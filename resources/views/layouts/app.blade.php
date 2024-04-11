@@ -26,7 +26,8 @@
     <iframe style="display:none;" name="back" id="back"></iframe>
     <div id="main">
         <a title="" href="?">
-            <div class="ti" style="background:url('./img/{{ $title->img }}'); background-size:cover;"></div>
+            <div class="ti" style="background:url('./img/@include('partials.title')'); background-size:cover;">
+            </div>
             <!--標題-->
         </a>
         <div id="ms">
@@ -74,7 +75,7 @@
 
                 </div>
                 <div class="dbor" style="margin:3px; width:95%; height:20%; line-height:100px;">
-                    <span class="t">進站總人數 :{{ $total->total }} </span>
+                    <span class="t">進站總人數 :@include('partials.total')</span>
                 </div>
             </div>
             <div class="di"
