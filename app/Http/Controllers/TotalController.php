@@ -2,17 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Title;
+use App\Models\Total;
 use Illuminate\Http\Request;
 
-class TitleController extends Controller
+class TotalController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('title.index');
+        //
     }
 
     /**
@@ -34,7 +34,7 @@ class TitleController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(title $title)
+    public function show(Total $total)
     {
         //
     }
@@ -42,7 +42,7 @@ class TitleController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(title $title)
+    public function edit(Total $total)
     {
         //
     }
@@ -50,7 +50,7 @@ class TitleController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, title $title)
+    public function update(Request $request, Total $total)
     {
         //
     }
@@ -58,14 +58,14 @@ class TitleController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(title $title)
+    public function destroy(Total $total)
     {
         //
     }
     // my
-    public function mytitle()
+    public function mytotal()
     {
-        $title = Title::where('sh', '1')->first();
-        return view('layouts.app', ['title' => $title]);
+        $total = Total::where();
+        return view('layouts.app', ['total' => $total]);
     }
 }

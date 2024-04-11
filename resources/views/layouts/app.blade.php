@@ -1,7 +1,5 @@
 @php
     include_once './api/db.php';
-    use Illuminate\Support\Facades\DB;
-    use App\Models\title;
 @endphp
 <!DOCTYPE html
     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -28,9 +26,6 @@
     <iframe style="display:none;" name="back" id="back"></iframe>
     <div id="main">
         <a title="" href="?">
-            @php
-                $title = DB::table('titles')->where('sh', '1')->first();
-            @endphp
             <div class="ti" style="background:url('./img/{{ $title->img }}'); background-size:cover;"></div>
             <!--標題-->
         </a>
@@ -39,7 +34,7 @@
                 <div id="menuput" class="dbor">
                     <!--主選單放此-->
                     <span class="t botli">後台管理選單</span>
-                    <a style="color:#000; font-size:13px; text-decoration:none;" href="?do=title">
+                    <a style="color:#000; font-size:13px; text-decoration:none;" href="{{ route('titles.index') }}">
                         <div class="mainmu">
                             網站標題管理 </div>
                     </a>
@@ -79,10 +74,7 @@
 
                 </div>
                 <div class="dbor" style="margin:3px; width:95%; height:20%; line-height:100px;">
-                    <span class="t">進站總人數 :
-                        <?php
-                        echo $Total->find(1)['total'];
-                        ?></span>
+                    <span class="t">進站總人數 :{{ $total->total }} </span>
                 </div>
             </div>
             <div class="di"
