@@ -12,7 +12,7 @@ class TitleController extends Controller
      */
     public function index()
     {
-        dd('index ok');
+        return view('title.index');
     }
 
     /**
