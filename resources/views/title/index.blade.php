@@ -12,7 +12,8 @@
                 <td><input type="text" nmae="text" value="{{ $title->text }}"></td>
                 <td><input type="checkbox" nmae="sh[]" value=""></td>
                 <td><input type="checkbox" nmae="del[]" value=""></td>
-                <td><input type="button" value="更新圖片"></td>
+                <td><input type="button" value="更新圖片"
+                        onclick="op('#cover','#cvr','./model/upload.php?do=title&id={{ $title->id }}')"></td>
             </tr>
         @endforeach
     </table>
